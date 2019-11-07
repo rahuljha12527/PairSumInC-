@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+int pairSum(int input[],int size,int x){
+    
+    for(int i=0;i<size;i++){
+        for(int j=i+1;j<size;j++){
+            
+            if(input[i]+input[j]==x){
+                if(input[i]>input[j]){
+                    cout<<input[j]<<" "<<input[i]<<endl;
+                }
+                else{
+                    cout<<input[i]<<" "<<input[j]<<endl;
+                }
+            }
+        }
+    }
+}
+
+int main() {
+	// your code goes here
+	int size;
+
+	
+	cin>>size;
+	int *input=new int[1+size];
+    
+    
+   
+	for(int i=0;i<size;i++){
+	       cin>>input[i];
+	}
+	int x;
+	cin>>x;
+	
+	pairSum(input,size,x);
+	
+	return 0;
+}
